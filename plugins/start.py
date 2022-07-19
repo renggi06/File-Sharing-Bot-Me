@@ -87,7 +87,7 @@ async def start_command(client: Client, message: Message):
     else:
         user = await get_infosudo(client)
         if user.username == None:
-            username = 'StoreSosmed_admin'
+            username = user.username
         else:
             username = user.username
         reply_markup = InlineKeyboardMarkup(
@@ -116,7 +116,7 @@ async def start_command(client: Client, message: Message):
 async def not_joined(client: Client, message: Message):
     user = await get_infosudo(client)
     if user.username == None:
-        username = 'StoreSosmed_admin'
+        username = user.username
     else:
         username = user.username
     buttons = [
