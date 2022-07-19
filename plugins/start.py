@@ -92,8 +92,10 @@ async def start_command(client: Client, message: Message):
             username = user.username
         reply_markup = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("🥷 ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ", callback_data = "about")],
-                [InlineKeyboardButton("🔒 ᴛᴜᴛᴜᴘ", callback_data = "close")],                
+                [
+                    InlineKeyboardButton("🥷 ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ", callback_data = "about"),
+                    InlineKeyboardButton("🔒 ᴛᴜᴛᴜᴘ", callback_data = "close")
+                ],              
             ]
         )
         await message.reply_text(
